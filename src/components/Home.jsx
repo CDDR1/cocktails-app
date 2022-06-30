@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className='px-4 pt-8'>
+            <div className='px-4 pt-8 flex flex-col items-center'>
                 <Searchbar />
                 <CocktailList />
             </div>
