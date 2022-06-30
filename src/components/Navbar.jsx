@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -7,11 +7,11 @@ const Navbar = () => {
             <nav>
                 <span>TheCocktailDB</span>
                 <ul>
-                    {/* <li><Link to='/Home' />Home</li>
-                    <li><Link to='/About' />About</li> */}
+                    <li><Link to='/Home'>Home</Link></li>
+                    <li><Link to='/About'>About</Link></li>
                 </ul>
             </nav>
-            {/* <Outlet /> */}
+            <Outlet />
         </>
     );
 };
