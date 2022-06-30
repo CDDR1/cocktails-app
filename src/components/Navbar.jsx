@@ -1,14 +1,18 @@
 import React from 'react';
+// import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <nav>
-            <span>TheCocktailDB</span>
-            <ul>
-                <li><a href='#'>Home</a></li>
-                <li><a href='#'>About</a></li>
-            </ul>
-        </nav>
+        <>
+            <nav>
+                <span>TheCocktailDB</span>
+                <ul>
+                    {/* <li><Link to='/Home' />Home</li>
+                    <li><Link to='/About' />About</li> */}
+                </ul>
+            </nav>
+            {/* <Outlet /> */}
+        </>
     );
 };
 
