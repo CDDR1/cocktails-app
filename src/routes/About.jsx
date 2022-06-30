@@ -1,7 +1,17 @@
-export default function Expenses() {
+import Navbar from "../components/Navbar";
+
+const About = () => {
     return (
-      <main style={{ padding: "1rem 0" }}>
-        <h2>About</h2>
-      </main>
+        <>
+            <Navbar />
+            <section>
+            <h1>About Us</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore reprehenderit beatae, aperiam fuga eaque asperiores natus nesciunt, optio mollitia, minima est facere odit dolorum consequuntur at. Rerum quis odio ipsam!
+            </p>
+        </section>
+        </>
     );
-  }
+};
+
+export default About;

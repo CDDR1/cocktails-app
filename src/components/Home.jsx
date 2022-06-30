@@ -8,8 +8,10 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <Searchbar />
-            <CocktailList />
+            <div className='px-4 pt-8'>
+                <Searchbar />
+                <CocktailList />
+            </div>
         </>
     );
 }
