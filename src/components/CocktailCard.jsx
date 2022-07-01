@@ -1,14 +1,14 @@
 import React from 'react';
 
-const CocktailCard = () => {
+const CocktailCard = ({image, name, glass, type}) => {
     return (
         <div>
-            <img></img>
+            <img src={image}></img>
             <div>
-                <h2></h2>
-                <span></span>
-                <span></span>
-                <button></button>
+                <h2>{name}</h2>
+                <span>{glass}</span>
+                <span>{type}</span>
+                <button>DETAILS</button>
             </div>
         </div>
     );

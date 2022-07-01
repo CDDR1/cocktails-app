@@ -11,11 +11,17 @@ const Home = () => {
         setSearchText(text);
     };
 
+    const [cocktails, setCocktails] = useState([]);
+
+    const searchCocktails = async () => {
+        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchText === '' ? 'a' : searchText}`);
+        const data = await response.json();
+        setCocktails(data.drinks);
+        console.log(data.drinks);
+    };
+
     useEffect(() => {
-        fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchText === '' ? 'a' : searchText}`)
-            .then(res => res.json())
-            .then(data => console.log(data.drinks[0]))
-            .catch(err => console.log(err));
+        searchCocktails();
     }, [searchText]);
 
     return (
@@ -23,7 +29,7 @@ const Home = () => {
             <Navbar />
             <div className='px-3 pt-8 flex flex-col items-center'>
                 <Searchbar onTextChange={handleSearchTextChange} />
-                <CocktailList />
+                <CocktailList dataArray={cocktails}/>
             </div>
         </>
     );
