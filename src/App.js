@@ -4,7 +4,7 @@ import About from "./routes/About";
 
 function App() {
     return (
-        <div className="App bg-ghost-white min-h-screen">
+        <div className="App bg-primary min-h-screen">
             <Routes>
                 <Route path="/" element={<Home />} exact />
                 <Route path="/About" element={<About />} exact />

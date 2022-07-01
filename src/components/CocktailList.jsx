@@ -5,8 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 const CocktailList = ({ dataArray }) => {
     return (
         <section className='pt-8'>
-            <h1 className='font-bold text-2xl tracking-widest text-primary'>Cocktails</h1>
-            <div>
+            <h1 className='font-bold text-2xl tracking-widest text-primary text-center mb-6'>Cocktails</h1>
+            <div className='flex flex-col items-center gap-5'>
                 {
                     dataArray.map(cocktail => 
                         <CocktailCard 
