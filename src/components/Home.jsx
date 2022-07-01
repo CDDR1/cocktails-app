@@ -4,6 +4,7 @@ import Searchbar from "./Searchbar";
 import CocktailList from "./CocktailList";
 import CocktailCard from "./CocktailCard";
 import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Home = () => {
     const [searchText, setSearchText] = useState('');
