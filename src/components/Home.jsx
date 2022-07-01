@@ -4,7 +4,6 @@ import Searchbar from "./Searchbar";
 import CocktailList from "./CocktailList";
 import CocktailCard from "./CocktailCard";
 import { useState, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 const Home = () => {
     const [searchText, setSearchText] = useState('');
@@ -28,7 +27,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className='px-3 pt-8 flex flex-col items-center'>
+            <div className='px-4 pt-8 mb-6 flex flex-col items-center'>
                 <Searchbar onTextChange={handleSearchTextChange} />
                 <CocktailList dataArray={cocktails}/>
             </div>
