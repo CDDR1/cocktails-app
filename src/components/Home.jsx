@@ -17,7 +17,6 @@ const Home = () => {
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText === '' ? 'a' : searchText}`);
             const data = await response.json();
             setCocktails(data.drinks);
-            console.log(data.drinks);
         } catch (error) {
             console.log(error);
         }
@@ -32,8 +31,12 @@ const Home = () => {
             <Navbar />
             <div className='px-4 pt-8 mb-6 flex flex-col items-center'>
                 <Searchbar onTextChange={handleSearchTextChange} />
-                <CocktailList dataArray={cocktails}/>
-            </div>
+                {
+                    cocktails !== null ? 
+                    <CocktailList dataArray={cocktails}/> :
+                    <h1>No cocktails match your search</h1>
+                }
+            </div> 
         </>
     );
 }
