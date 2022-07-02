@@ -8,6 +8,7 @@ const CocktailList = ({ dataArray }) => {
             <h1 className='font-bold text-2xl tracking-widest text-primary text-center mb-6'>Cocktails</h1>
             <div className='flex flex-col items-center gap-5'>
                 {
+                    dataArray !== null ?
                     dataArray.map(cocktail => 
                         <CocktailCard 
                         key={uuidv4()}
@@ -16,7 +17,8 @@ const CocktailList = ({ dataArray }) => {
                         glass={cocktail.strGlass}
                         type={cocktail.strAlcoholic}
                         />
-                    )
+                    ) :
+                    <h2>No cocktails match the search</h2>
                 }      
             </div>
         </section>

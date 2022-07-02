@@ -13,10 +13,14 @@ const Home = () => {
     const [cocktails, setCocktails] = useState([]);
 
     const searchCocktails = async () => {
-        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText === '' ? 'a' : searchText}`);
-        const data = await response.json();
-        setCocktails(data.drinks);
-        console.log(data.drinks);
+        try {
+            const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText === '' ? 'a' : searchText}`);
+            const data = await response.json();
+            setCocktails(data.drinks);
+            console.log(data.drinks);
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     useEffect(() => {
