@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from "./Navbar";
 import Searchbar from "./Searchbar";
 import CocktailList from "./CocktailList";
-import CocktailCard from "./CocktailCard";
 import { useState, useEffect } from 'react';
 
 const Home = () => {
@@ -14,7 +13,7 @@ const Home = () => {
     const [cocktails, setCocktails] = useState([]);
 
     const searchCocktails = async () => {
-        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchText === '' ? 'a' : searchText}`);
+        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText === '' ? 'a' : searchText}`);
         const data = await response.json();
         setCocktails(data.drinks);
         console.log(data.drinks);
