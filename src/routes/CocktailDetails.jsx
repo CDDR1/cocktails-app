@@ -1,6 +1,11 @@
+import Navbar from "../components/Navbar";
+
 const CocktailDetails = () => {
     return (
-        <h1>HELLO DETAILS!!!</h1>
+        <>
+            <Navbar />
+            <h1>HELLO DETAILS!!!</h1>
+        </>
     );
 };
 
