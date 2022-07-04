@@ -1,4 +1,5 @@
-import React from 'react';
+import { React } from 'react';
+import { Link } from 'react-router-dom';
 
 const CocktailCard = ({cocktailID, image, name, glass, type}) => {
     return (
@@ -8,7 +9,7 @@ const CocktailCard = ({cocktailID, image, name, glass, type}) => {
                 <h2 className='font-bold text-2xl'>{name}</h2>
                 <span className='block font-medium text-lg'>{glass}</span>
                 <span className='block font-medium text-gray-600'>{type}</span>
-                <a href={`/CocktailDetails/${cocktailID}`} className='block mt-1.5 px-1 py-0.5 rounded-md bg-primary text-white tracking-widest font-normal'>DETAILS</a>
+                <Link to={`/CocktailDetails/${cocktailID}`} className='block mt-1.5 px-1 py-0.5 rounded-md bg-primary text-white tracking-widest font-normal'>DETAILS</Link>
             </div>
         </div>
     );

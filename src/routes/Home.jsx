@@ -3,28 +3,10 @@ import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import CocktailList from "../components/CocktailList";
 import { useState, useEffect, useContext } from 'react';
+import AppContext from '../contexts/AppContext';
 
 const Home = () => {
-    const [searchText, setSearchText] = useState('');
-    const handleSearchTextChange = (text) => {
-        setSearchText(text);
-    };
-
-    const [cocktails, setCocktails] = useState([]);
-
-    const searchCocktails = async () => {
-        try {
-            const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText === '' ? 'a' : searchText}`);
-            const data = await response.json();
-            setCocktails(data.drinks);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        searchCocktails();
-    }, [searchText]);
+    const { searchText, handleSearchTextChange, cocktails } = useContext(AppContext);
 
     return (
         <>
@@ -32,7 +14,7 @@ const Home = () => {
             <div className='px-4 pt-8 mb-6 flex flex-col items-center'>
                 <Searchbar onTextChange={handleSearchTextChange} />
                 {
-                    cocktails !== null ? 
+                    cocktails ? 
                     <CocktailList dataArray={cocktails}/> 
                     :
                     <h1>No cocktails match your search</h1>
