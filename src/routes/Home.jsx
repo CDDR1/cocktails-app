@@ -1,9 +1,8 @@
 import React from 'react';
-import Navbar from "./Navbar";
-import Searchbar from "./Searchbar";
-import CocktailList from "./CocktailList";
-import { useState, useEffect } from 'react';
-import DetailsProvider from '../context/DetailsContext';
+import Navbar from "../components/Navbar";
+import Searchbar from "../components/Searchbar";
+import CocktailList from "../components/CocktailList";
+import { useState, useEffect, useContext } from 'react';
 
 const Home = () => {
     const [searchText, setSearchText] = useState('');
@@ -34,9 +33,7 @@ const Home = () => {
                 <Searchbar onTextChange={handleSearchTextChange} />
                 {
                     cocktails !== null ? 
-                    <DetailsProvider>
-                        <CocktailList dataArray={cocktails}/> 
-                    </DetailsProvider>
+                    <CocktailList dataArray={cocktails}/> 
                     :
                     <h1>No cocktails match your search</h1>
                 }

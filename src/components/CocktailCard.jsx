@@ -1,8 +1,6 @@
 import React from 'react';
-import { useHandleDetailsClick } from '../context/DetailsContext';
 
 const CocktailCard = ({cocktailID, image, name, glass, type}) => {
-    const showDetails = useHandleDetailsClick();
     return (
         <div className='bg-white rounded-md shadow-md w-64'>
             <img src={image} className='rounded-t-md max-h-52 w-full object-cover'></img>

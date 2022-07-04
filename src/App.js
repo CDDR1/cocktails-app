@@ -1,7 +1,7 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
+import { Routes, Route } from "react-router-dom";
+import Home from "./routes/Home";
 import About from "./routes/About";
-import CocktailDetails from './routes/CocktailDetails';
+import CocktailDetails from "./routes/CocktailDetails";
 
 function App() {
     return (
