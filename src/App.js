@@ -6,7 +6,7 @@ import { AppProvider } from "./contexts/AppContext";
 
 function App() {
     return (
-        <div className="App bg-primary min-h-screen">
+        <div className="App bg-gradient-to-r from-primary-200 to-primary-100">
             <AppProvider>
                 <Routes>
                     <Route path="/" element={<Home />} exact />

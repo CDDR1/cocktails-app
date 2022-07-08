@@ -1,28 +1,18 @@
 import Navbar from "../components/Navbar";
-import CocktailCard from "../components/CocktailCard";
+import IndividualCocktail from "../components/IndividualCocktail"
 import AppContext from '../contexts/AppContext';
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
 const CocktailDetails = () => {
-    const { cocktails } = useContext(AppContext);
     const { id } = useParams();
+    const { cocktails } = useContext(AppContext);
+    const cocktailToDisplay = cocktails.filter(cocktail => cocktail.idDrink === id);
 
     return (
         <>
             <Navbar />
-            {
-                cocktails.filter(cocktail => cocktail.idDrink === id)
-                .map(cocktail => 
-                    <CocktailCard 
-                        cocktailID={cocktail.idDrink} 
-                        image={cocktail.strDrinkThumb}
-                        name={cocktail.strDrink}
-                        glass={cocktail.strGlass}
-                        type={cocktail.strAlcoholic} 
-                    />
-                )
-            }
+            <IndividualCocktail selectedCocktail={cocktailToDisplay[0]} />
         </>
     );
 };

@@ -2,16 +2,16 @@ import React from 'react';
 import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import CocktailList from "../components/CocktailList";
-import { useState, useEffect, useContext } from 'react';
 import AppContext from '../contexts/AppContext';
+import { useContext } from 'react';
 
 const Home = () => {
-    const { searchText, handleSearchTextChange, cocktails } = useContext(AppContext);
+    const { handleSearchTextChange, cocktails } = useContext(AppContext);
 
     return (
         <>
             <Navbar />
-            <div className='px-4 pt-8 mb-6 flex flex-col items-center'>
+            <div className='px-4 pt-8 mb-6 flex flex-wrap'>
                 <Searchbar onTextChange={handleSearchTextChange} />
                 {
                     cocktails ? 

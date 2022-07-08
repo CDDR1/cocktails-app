@@ -4,11 +4,10 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "primary": "#46542F",
-                "secondary": "#4C1C00",
-                "accent": "#FFE74C",
-                "ghost-white": "#FAFAFF",
-                "jet-grey": "#343434",
+                "primary": {
+                    "100": "#6200ff",
+                    "200": "#490979"
+                }
             },
             fontFamily: {
                 "title": "'Concert One', cursive"
