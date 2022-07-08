@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className='px-4 pt-8 mb-6 flex flex-wrap'>
+            <div className='px-4 pt-8 pb-8'>
                 <Searchbar onTextChange={handleSearchTextChange} />
                 {
                     cocktails ? 

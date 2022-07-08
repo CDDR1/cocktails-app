@@ -11,7 +11,14 @@ module.exports = {
             },
             fontFamily: {
                 "title": "'Concert One', cursive"
-            }
+            },
+            screens: {
+                "2xl": "1370px",
+                // => @media (min-width: 1375px) { ... }
+                
+                "3xl": "1690px",
+                // => @media (min-width: 1690px) { ... }
+            },
         },
     },
     plugins: [],
