@@ -10,10 +10,10 @@ const CocktailDetails = () => {
     const cocktailToDisplay = cocktails.filter(cocktail => cocktail.idDrink === id);
 
     return (
-        <>
+        <div className="min-h-screen">
             <Navbar />
             <IndividualCocktail selectedCocktail={cocktailToDisplay[0]} />
-        </>
+        </div>
     );
 };
 
