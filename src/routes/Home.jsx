@@ -1,9 +1,8 @@
-import React from 'react';
 import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import CocktailList from "../components/CocktailList";
-import AppContext from '../contexts/AppContext';
-import { useContext } from 'react';
+import AppContext from "../contexts/AppContext";
+import { useContext } from "react";
 
 const Home = () => {
     const { handleSearchTextChange, cocktails } = useContext(AppContext);
