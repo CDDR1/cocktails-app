@@ -1,4 +1,3 @@
-import AppContext from "../contexts/AppContext";
 import { Link } from "react-router-dom";
 
 const IndividualCocktail = ({ selectedCocktail }) => {
