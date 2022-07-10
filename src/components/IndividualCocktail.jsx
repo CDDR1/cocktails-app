@@ -5,7 +5,7 @@ const IndividualCocktail = ({ selectedCocktail }) => {
         <>
             <div className="text-white font-semibold">
                 <div className="flex flex-col gap-4 items-center mt-10 3xl:mt-24">
-                    <Link to="/" className="bg-white text-black px-3 py-1 mb-3 rounded-md inline-block">
+                    <Link to="/" className="bg-white text-black px-3 py-1 mb-3 rounded-md inline-block hover:bg-gray-200">
                         BACK HOME
                     </Link>
                     <h1 className="text-4xl tracking-wider text-center mb-8">{selectedCocktail.strDrink}</h1>

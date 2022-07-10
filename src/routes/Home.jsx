@@ -10,13 +10,13 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className='px-4 pt-8 pb-8'>
+            <div className='px-4 pt-8 pb-8 min-h-screen'>
                 <Searchbar onTextChange={handleSearchTextChange} />
                 {
                     cocktails ? 
                     <CocktailList dataArray={cocktails}/> 
                     :
-                    <h1>No cocktails match your search</h1>
+                    <h1 className="text-white text-center mt-10 text-2xl">No cocktails match your search</h1>
                 }
             </div> 
         </>
