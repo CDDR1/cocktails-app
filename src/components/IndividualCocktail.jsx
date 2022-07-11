@@ -12,7 +12,7 @@ const IndividualCocktail = ({ selectedCocktail }) => {
                 </div>
                 <div className="p-5 flex flex-col items-center lg:flex-row lg:justify-center lg:px-32 gap-10">
                     <div>
-                        <img src={selectedCocktail.strDrinkThumb} className="rounded-sm max-w-sm"></img>
+                        <img src={selectedCocktail.strDrinkThumb} className="rounded-sm md:max-w-sm"></img>
                     </div>
                     <ul>
                         <li className="mb-5">
